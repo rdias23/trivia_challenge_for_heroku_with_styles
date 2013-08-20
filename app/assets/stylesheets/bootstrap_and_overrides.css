@@ -102,9 +102,9 @@
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	background: url(/images/scroll_Top.jpg) center top no-repeat,
-	            url(/images/scroll_Bottom.jpg) center bottom no-repeat,
-        	    url(/images/scroll_Middle.jpg) center top repeat-y;
+	background: url(/images/scroll_top.jpg) center top no-repeat,
+	            url(/images/scroll_bottom.jpg) center bottom no-repeat,
+        	    url(/images/scroll_middle.jpg) center top repeat-y;
 }
 	
 .button_2 {
@@ -115,9 +115,9 @@
         margin-left: auto;
         margin-right: auto;
 	text-align: center;
-	background: url(/images/scroll_Top.jpg) center top no-repeat,
-                    url(/images/scroll_Bottom.jpg) center bottom no-repeat,
-                    url(/images/scroll_Middle.jpg) center top repeat-y;
+	background: url(/images/scroll_top.jpg) center top no-repeat,
+                    url(/images/scroll_bottom.jpg) center bottom no-repeat,
+                    url(/images/scroll_middle.jpg) center top repeat-y;
 }
 	
 .button_3 {
@@ -130,12 +130,9 @@
 	text-align: center;
 	text-align: center;
         
-
-	background-image: image-url(/images/scroll_Top.jpg);
-
-//	background: url(/images/scroll_Top.jpg) center top no-repeat,
-//                    url(/images/scroll_Bottom.jpg) center bottom no-repeat,
-//                    url(/images/scroll_Middle.jpg) center top repeat-y;
+	background: url(/images/scroll_top.jpg) center top no-repeat,
+                    url(/images/scroll_bottom.jpg) center bottom no-repeat,
+                    url(/images/scroll_middle.jpg) center top repeat-y;
 }	
 
 .level_of_lore_mastery {
