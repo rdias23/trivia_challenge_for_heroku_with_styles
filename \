@@ -1,0 +1,168 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+  =require twitter-bootstrap-static/fontawesome
+  */
+
+/* question (/quiz/question) page */
+.choice {font-size: 1.2em; margin: 0; border-radius: 4px;}
+.choice:hover {background-color: #ffdb73;}
+.choice label {width: 400px; display: inline-block; padding: 10px 0 10px 0; margin: 0;}
+
+/* feedback (/quiz/answer) page */
+.correct {background-color: #64de89;}
+.incorrect {background-color: #ff8373;}
+.feedback {font-weight: bold; font-size: 1.2em; }
+.feedback-choice {margin: 0 0 5px 0; font-size: 1.2em; padding: 10px 5px 10px 25px; border-radius: 4px;}
+
+/* home page */
+.title {
+	width: 504px ;
+  	margin-left: auto ;
+  	margin-right: auto ;
+
+	}
+
+.iron_throne {
+	background-image: url(/images/iron_throne2.jpg); 
+	background-repeat: no-repeat;
+	height: 264px;
+	width: 802px;
+	margin-left: auto ;
+	margin-right: auto ;
+	}
+
+
+#wholePage {
+    background-color: black;
+    background-image: url(/images/bg_page2.png);
+    background-repeat: repeat-y;
+    background-position: center top;
+    
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+}
+
+.user_nav_bg {
+    background-color: black;
+    background-image: url(/images/bg_page2.png);
+    background-repeat: repeat-y;
+    background-position: center top;
+
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+}
+
+#user_nav {
+    	width: 802px;
+        margin-left: auto ;
+        margin-right: auto ;
+}
+
+.addQuestions {
+	width: 802px;
+        margin-left: auto ;
+        margin-right: auto ;
+}
+
+.centerQuestions {
+	width: 802px;
+        margin-left: auto ;
+        margin-right: auto ;
+}
+
+.buttons {
+	width: 1210px;
+        margin-left: auto ;
+        margin-right: auto ;
+}
+
+.buttons h1 {
+	font-family: Comic Sans MS, Comic Sans MS5, cursive;
+	font-size: 20px;
+	font-style:italic;
+	margin-left: 210px;
+}
+
+.button_1 {
+	float: left;
+	width: 266px;
+	height: 66px;
+	padding: 66px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background: url(/images/scroll_Top.jpg) center top no-repeat,
+	            url(/images/scroll_Bottom.jpg) center bottom no-repeat,
+        	    url(/images/scroll_Middle.jpg) center top repeat-y;
+}
+	
+.button_2 {
+	float:left;
+        width: 266px;
+	height: 66px;
+	padding: 66px;
+        margin-left: auto;
+        margin-right: auto;
+	text-align: center;
+	background: url(/images/scroll_Top.jpg) center top no-repeat,
+                    url(/images/scroll_Bottom.jpg) center bottom no-repeat,
+                    url(/images/scroll_Middle.jpg) center top repeat-y;
+}
+	
+.button_3 {
+	float:left;
+        width: 266px;
+	height: 66px;
+        padding: 66px;
+        margin-left: auto;
+        margin-right: auto;
+	text-align: center;
+	text-align: center;
+        background: url(/images/scroll_Top.jpg) center top no-repeat,
+                    url(/images/scroll_Bottom.jpg) center bottom no-repeat,
+                    url(/images/scroll_Middle.jpg) center top repeat-y;
+}	
+
+.level_of_lore_mastery {
+	font-family: Comic Sans MS, Comic Sans MS5, cursive;
+        font-size: 30px;
+        font-style: italic;
+	font-weight:bold;
+}
+
+
+.high_scores_fp {
+	width: 1180px;
+        margin-left: auto ;
+        margin-right: auto ;
+}
+
+.high_scores_fp h1 {
+	font-family: Comic Sans MS, Comic Sans MS5, cursive;
+        font-size: 40px;
+        font-style: italic;
+        font-weight:bold;
+	text-align: center;
+}
+
+td, th { 
+	padding: 10px; 
+	text-align: center;
+}
+
+th {
+	background-color: white;
+}
+
+td {
+	background-color: white;
+}
+
+table {
+	background-color: yellow;
+} 

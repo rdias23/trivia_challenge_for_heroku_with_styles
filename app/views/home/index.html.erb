@@ -1,0 +1,151 @@
+
+<div id="wholePage">
+
+<div class="addQuestions">
+<% if current_user && current_user.admin? %>
+<br /><%= link_to "Add Questions", questions_path %>
+<% else %>
+<% end %>
+</div>
+
+<div class="iron_throne">
+<div class="title"><img src="/images/Trivia_Challenge_Title.gif" alt="Welcome to the A Song of Ice and Fire Trivia Challenge!" height="216" width="504"></div>
+</div>
+
+<div class="buttons">
+<h1>Choose your level of lore mastery:</h1>
+
+<div class="button_1">
+<p><%= link_to "Alcolyte", quiz_index_path, {:style=>'color: black;', :class => "level_of_lore_mastery", :title => "Alcolyte"}%> </p>
+</div>
+
+<div class="button_2">
+<p><%= link_to "Maester", challenge_maester_index_path, {:style=>'color: black;', :class => "level_of_lore_mastery", :title => "Maester"} %> <p/> 
+</div>
+
+<div class="button_3">
+<p><%= link_to "Archmaester", challenge_archmaester_index_path, {:style=>'color: black;', :class => "level_of_lore_mastery", :title => "Archmaester"} %> </p>
+</div>
+
+
+<p></p>
+</div>
+
+</div>
+<body>
+
+<div class="high_scores_fp">
+<!-- Main Table(You can define padding accordingly) -->
+<table width="100%" border="1" cellspacing="0" cellpadding="5" bordercolor=white>
+<tr>
+<td width="50%">
+
+
+<div class="fp_mc_float">
+<!-- Table on left side -->
+<table width="100%" border="1" cellspacing="0" cellpadding="1">
+<tr>
+    <th>Place</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Score</th>
+    <th>House</th>
+    <th>Profile</th>
+</tr>
+
+<h1>Maester's Challenge <br /> High Scores</h1>
+
+<% @high_score_sorted_array_of_hashes_maester.each do |scb| %>
+ 
+<% if @limit_maester_scores_to_ten <= 10 %>
+	<% @limit_maester_scores_to_ten = @limit_maester_scores_to_ten + 1 %>
+
+<tr>
+        <% if @is_first_score_maester == "true" %>
+                <% @is_first_score_maester = "false" %>
+                <% @previous_score_maester = scb.score %>
+        <% else %>
+                <% if @previous_score_maester == scb.score %>
+                <% else %>
+                        <% @count_maester = @count_maester + 1 %>
+                        <% @previous_score_maester = scb.score %>
+                <% end %>
+        <% end %>
+   <td><%= @count_maester.ordinalize %></td>
+   <td><%= scb.user.first_name %></td>
+   <td><%= scb.user.last_name %></td>
+   <td><%= scb.score %></td>
+   <td><%= scb.user.house_allegiance %></td>
+   <td><%= link_to "details", user_path(:id => scb.user_id), {:class => "iframe", :title => "Details"} %></td>
+  </tr>
+<% end %>
+
+<% end %>
+
+</table>
+<!-- END -->
+</div>
+
+
+</td>
+<td width="50%">
+
+
+
+
+
+<div class="fp_amc_float">
+<!-- Table on right side -->
+<table width="100%" border="1" cellspacing="0" cellpadding="1">
+<tr>
+    <th>Place</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Score</th>
+    <th>House</th>
+    <th>Profile</th>
+</tr>
+
+<h1>Archmaester's Challenge <br /> High Scores</h1>
+<% @high_score_sorted_array_of_hashes_archmaester.each do |scb| %>
+
+<% if @limit_archmaester_scores_to_ten <= 10 %>
+        <% @limit_archmaester_scores_to_ten = @limit_archmaester_scores_to_ten + 1 %>
+
+ <tr>
+        <% if @is_first_score_archmaester == "true" %>
+                <% @is_first_score_archmaester = "false" %>
+                <% @previous_score_archmaester = scb.score %>
+        <% else %>
+                <% if @previous_score_archmaester == scb.score %>
+                <% else %>
+                        <% @count_archmaester = @count_archmaester + 1 %>
+                        <% @previous_score_archmaester = scb.score %>
+                <% end %>
+        <% end %>
+
+   <td><%= @count_archmaester.ordinalize %></td>
+   <td><%= scb.user.first_name %></td>
+   <td><%= scb.user.last_name %></td>
+   <td><%= scb.score %></td>
+   <td><%= scb.user.house_allegiance %>
+   <td><%= link_to "details", user_path(:id => scb.user_id), {:class => "iframe", :title => "Details"} %>
+  </tr>
+<% end %>
+
+<% end %>
+</table>
+<!-- END -->
+</div>
+
+</td>
+</tr>
+</table>
+
+<!-- END OF MAIN TABLE -->
+</div> <!-- closing div for the double table -->
+</body>
+
+<br/><br/><br/><!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>-->
+
+</div>

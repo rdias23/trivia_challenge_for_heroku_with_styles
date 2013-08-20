@@ -1,0 +1,39 @@
+require 'test_helper'
+
+class QuizControllerTest < ActionController::TestCase
+  test "should get index" do
+    get :index
+    assert_response :success
+  end
+
+  test "should get start" do
+    get :start
+    assert_response :success
+  end
+
+  test "should get question" do
+    get :question
+    assert_response :success
+  end
+
+  test "should get answer" do
+    get :answer
+    assert_response :success
+  end
+
+  test "should get end" do
+    get :end
+    assert_response :success
+  end
+
+  test "should get create" do
+    get :create
+    assert_response :success
+  end
+
+  test "should get destroy" do
+    get :destroy
+    assert_response :success
+  end
+
+end

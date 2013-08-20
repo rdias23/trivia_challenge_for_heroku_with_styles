@@ -1,0 +1,82 @@
+<div class="end">
+
+<h1>Archmaester's Challenge Results</h1>
+<p id="question">You answered correctly <%= @correct %> out of <%= @total %> questions.</p>
+
+<p> Congratulations <%= @user.first_name %> you answered <%= @score %>% of the questions correctly! </p>
+
+<table class="archmaester_table" border="1">
+  <tr>
+    <th>Place</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Score</th>
+    <th>House</th>
+    <th>Profile</th>
+  </tr>
+
+<h1>Archmaester's Challenge High Scores</h1>
+<% @high_score_sorted_array_of_hashes.each do |scb| %>
+
+<% if @limit_archmaester_scores_to_ten <= 10 %>
+        <% @limit_archmaester_scores_to_ten = @limit_archmaester_scores_to_ten + 1 %>
+
+<% if scb.id == @scoreboards.last.id %>
+
+  <tr id="last_score">
+        <% if @is_first_score == "true" %>
+                <% @is_first_score = "false" %>
+                <% @previous_score = scb.score %>
+        <% else %>
+                <% if @previous_score == scb.score %>
+                <% else %>
+                        <% @count = @count + 1 %>
+                        <% @previous_score = scb.score %>
+                <% end %>
+        <% end %>
+
+   <td><%= @count.ordinalize %></td>
+   <td><%= scb.user.first_name %></td>
+   <td><%= scb.user.last_name %></td>
+   <td><%= scb.score %></td>
+   <td><%= scb.user.house_allegiance %>
+   <td><%= link_to "details", user_path(:id => scb.user_id) %>
+  </tr>
+<%else%>
+ <tr>
+	<% if @is_first_score == "true" %>
+        	<% @is_first_score = "false" %>
+                <% @previous_score = scb.score %>
+        <% else %>
+		<% if @previous_score == scb.score %>
+		<% else %>
+			<% @count = @count + 1 %>
+                        <% @previous_score = scb.score %>
+		<% end %>
+        <% end %>
+
+   <td><%= @count.ordinalize %></td>
+   <td><%= scb.user.first_name %></td>
+   <td><%= scb.user.last_name %></td>
+   <td><%= scb.score %></td>
+   <td><%= scb.user.house_allegiance %>
+   <td><%= link_to "details", user_path(:id => scb.user_id) %>
+  </tr>
+
+<% end %>
+<% end %>
+
+<% end %>
+
+</table>
+<br/>
+
+<%= form_tag({:controller => "home", :action => "index"}, :method => "get") do %>
+  <div class="center">
+	 <%= submit_tag("Take Me Home", :class => "submit") %>
+  </div>
+<% end %>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="index">
+
+<h1>Welcome to the Maester's Challenge!</h1>
+
+The Maester's Challenge will give the user the chance to test their A Song of Ice and Fire trivia skills with a group of medium difficulty questions. For the purpose of keeping this demonstration short, The Maester's Challenge will be restricted to 10 questions. 
+
+<br /><br />
+
+
+<%= form_tag({:controller => "challenge_maester", :action => "start"}, :method => "get") do %>
+         <%= submit_tag("Begin!!!!", :class => "submit") %>
+<% end %>
+
+</div>

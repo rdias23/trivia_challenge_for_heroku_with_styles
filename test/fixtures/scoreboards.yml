@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  score_type: MyString
+  score: 1
+  user_id: 
+
+two:
+  score_type: MyString
+  score: 1
+  user_id: 

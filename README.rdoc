@@ -1,0 +1,51 @@
+Raymond Dias
+BEWD Final Project
+Spring 2013
+
+Project Title: "The A Song of Ice and Fire Trivia Challenge"
+Hosted on Heroku: http://enigmatic-ravine-9938.herokuapp.com
+
+Abstract: "A Song of Ice and Fire" is a series of fantasy novels by George RR Martin; these novels are the source material for the HBO television series "Game of Thrones." The "A Song of Ice and Fire Trivia Challenge" is a web application that gives users the opportunity to test their knowedge of the "A Song of Ice and Fire" universe. In addition to the main books in the series, trivia questions may also come from the "Dunk and Egg" prequel novellas, also written by George RR Martin.
+
+NOTES:
+- The seeds file contains 30 questions, with corresponding answer sets--10 for each skill level: "alcolyte" (easy), "maester" (medium), "archmaester" (difficult). The "maester's challenge" and the "archmaester's challenge" have been set to 10 questions each for the purpose of brevity during project presentation. When deployed for actual use these "challenges" will be 100 questions in length or longer.
+- The seeds file does not contain an admin user. When deploying the code, after using rake to migrate the database, the first user needs to be created via the registration form. Then the admin boolean on that user account needs to be set to "true" in order to designate that user account an administrator.
+- Adminstrator accounts will see a "Add Question" link at the top-left of the browser window. Clicking on that link will take them to the /questions directory where they can add, delete, and edit questions and choices manually.
+- Admistrator Account credentials will be provided for instructors (Steven, Eddie, and Stephanie) via Schoology messaging and/or other means...
+
+Project Requirements:
+1)  "User Generated Content. Your web application must have user-generated content that can be discovered by other users. It will maintain user accounts."
+- Users will generate content when they register for user accounts in the system. The registration process allows them to fill in biographical information and answer questions about favorite story elements from the book series. (Originally, user uploaded avatar pictures through the 'carrier wave' gem was part of the blueprint for the project; however, it was decided that user uploaded 'avatar' pictures were undesirable because they detracted from the minimalist aesthetic.) They will also generate content when they finish a 'trivia challenge': the score will get posted in one of the high score charts.
+- The profile information will be discoverable by visitors to the website through the 'details' column in the high score charts; clicking 'details' in the score row of a particular user will display that user's profile information.
+
+2) "Security Features. Login credentials must be validated before users can gain access to your application. Your site should have public and private content."
+- Users will not be able to submit registration forms with unacceptable login credentials. User IDs may not be duplicated, e-mail addresses must be appropriately formatted, and passwords must meet minimum complexity requirements. 
+- The Profile Information and High Score Information will be publicly accessible. Additionally, visitors will be able to take a short quiz ranging in length from 1 to 10 questions (at the vistor's discretion) without logging into the website. The quiz results do not get posted to a high score tables.
+- The Trivia Challenge ("maester's challenge" and "archmaester's challenge") questions themselves will only be available if you have login credentials. Apon completion of a trivia challenge, the score will appear in a high score table.
+
+3) "Hosted. No need to pay for hosting services, you can use GitHub and Heroku."
+- Hosted on Heroku: http://enigmatic-ravine-9938.herokuapp.com
+
+4) "Ruby Gems. Use a Ruby Gem (not the Rails defaults, obviously they don't count). Some ideas to look into: devise or paper clip, carrier wave."
+- Non-default Gems used:
+gem 'activerecord-session_store, git: "git://github.com/rails/activerecord-session_store.git"
+
+gem 'devise', '3.0.0.rc'
+
+gem "therubyracer"
+
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
+gem "twitter-bootstrap-rails"
+
+gem 'rails_log_stdout', github: 'heroku/rails_log_stdout'
+
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+
+5) "Handles invalid data. Forms in your application should validate data and handle incorrect inputs. Validate sign up information, verify valid email addresses and secure passwords."
+- The user account registration form will not allow users to submit data that does not meet requirements. If the user attempts to submit the Registration Form with invalid information they will be told which fields contain invalid information, the reason the information is invalid, and prompted to change the invalid information before submitting the form again.
+
+6) "Make use of associations. At least two of your models should be associated."
+- A "question" has many "choices". A "choice" belongs to a "question".
+- A "user" has many "scoreboards". A "scoreboard" belongs to a "user". (this name choice is a bit confusing... a scoreboard object is best thought of as an index card holding the score for a single challenge type that is give to an individual user... when the "high score" table does its calculations it uses all the scoreboard objects belonging to all the users that are of the cahallenge type of interest)
+

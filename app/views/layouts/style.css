@@ -1,0 +1,12 @@
+/* question (/quiz/question) page */
+.choice {font-size: 1.2em; margin: 0; border-radius: 4px;}
+.choice:hover {background-color: #ffdb73;}
+.choice label {width: 400px; display: inline-block; padding: 10px 0 10px 0; margin: 0;}
+
+/* feedback (/quiz/answer) page */
+.correct {background-color: #64de89;}
+.incorrect {background-color: #ff8373;}
+.feedback {font-weight: bold; font-size: 1.2em; }
+.feedback-choice {margin: 0 0 5px 0; font-size: 1.2em; padding: 10px 5px 10px 25px; border-radius: 4px;}
+
+@import url(app/assets/stylesheets/application.css)

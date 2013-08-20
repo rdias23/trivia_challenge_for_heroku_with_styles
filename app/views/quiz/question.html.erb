@@ -1,0 +1,22 @@
+
+<div class="question">
+
+<div class="centerQuestions">
+<h1>Question <%= @current + 1 %> of <%= @total %></h1>
+<p id="question"><%= @question.text %></p>
+
+<%= form_tag({:controller => "quiz", :action => "answer"}) do %>
+  <% @choices.each do |choice| %>
+	 <p class="choice">
+		<%= radio_button_tag(:choice, choice.id) %>
+		<%= label_tag("choice_".concat(choice.id.to_s).to_sym, choice.text) %>
+	 </p>
+  <% end %>
+ </div> 
+  <div class="center">
+	 <%= submit_tag("Continue", :class => "submit") %>
+  </div>
+<% end %>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>

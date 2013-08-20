@@ -1,0 +1,50 @@
+<div class="sign_up">
+<center> <h2>Sign up</h2> </center>
+
+<div class="float_left">
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div><%= f.label :house_allegiance, "Declare Your House Allegiance!" %>
+  <%= f.select :house_allegiance, options_for_select([["", ""], ["Stark", "Stark"], ["Lannister", "Lannister"], ["Greyjoy", "Greyjoy"], ["Martell", "Martell"], ["Tyrell", "Tyrell"], ["Arryn", "Arryn"], ["Tagaryen", "Targaryen"], ["Baratheon", "Baratheon"], ["Blackfyre", "Blackfyre"], ["Night's Watch", "Night's Watch"]], @user.house_allegiance) %></div>
+
+  <div><%= f.label :favorite_book, "What was your favorite book in ASOIAF?" %>
+  <%= f.select :favorite_book, options_for_select([["", ""], ["A Game of Thrones", "A Game of Thrones"], ["A Clash of Kings"],["A Storm of Swords", "A Storm of Swords"],["A Feast for Crows", "A Feast for Crows"],["A Dance with Dragons"]], @user.favorite_book) %></div><br />
+
+  <div><%= f.label :first_name, "First Name (required field)" %>
+  <%= f.text_field :first_name %></div><br />
+
+  <div><%= f.label :last_name, "Last Name (required field)" %>
+  <%= f.text_field :last_name %></div><br />
+
+  <div><%= f.label :bio, "Bio: Tell us something about yourself!" %>
+  <%= f.text_area :bio %></div><br />
+
+</div>
+
+
+<div class="float_right>
+  <div><%= f.label :favorite_quote, "Favorite Quote  " %><%= link_to "(see suggested quotes in new tab?)", "http://www.goodreads.com/author/quotes/346732.George_R_R_Martin", :target => '_blank'%><br />
+  <%= f.text_area :favorite_quote %></div><br />
+
+  <div><%= f.label :email, "Email (required field)" %>
+  <%= f.email_field :email, :autofocus => true %></div><br />
+
+  <div><%= f.label :password, "Password (required field)" %>
+  <%= f.password_field :password %></div><br />
+
+  <div><%= f.label :password_confirmation, "Password Confirmation (required field)" %>
+  <%= f.password_field :password_confirmation %></div><br />
+
+  <div><%= f.submit "Sign up" %></div>
+
+
+<% end %>
+
+<p> <%= link_to "Home", home_index_path %> </p>
+<!-- <%= render "devise/shared/links" %> -->
+</div>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+

@@ -1,0 +1,42 @@
+<div class="centerQuestions">
+
+<p> <%= link_to "Home", home_index_path %> </p>
+<h1>Listing Questions</h1>
+
+
+Total Questions: <%= @questions.size %><br />-------------------------------<br />
+Alcolyte Questions (minimum 10): <%= @alcolyte_questions.size %><br />
+Maester Questions (minimum 10): <%= @maester_questions.size %><br />
+Archmaester Questions (minimum 10): <%= @archmaester_questions.size %>
+<p><%= link_to 'New Question', new_question_path %></p>
+
+<table border="1">
+  <tr>
+    <th>Text</th>
+    <th>Choices</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @questions.each do |question| %>
+ <tr>
+   <td><%= question.text %> <br /> (Question Type: <%= question.question_type %>)</td>
+   <td>
+      <ul>
+        <% question.choices.each do |choice| %>
+          <li>
+            <%= choice.text %>
+            <% if choice.correct %> (Correct) <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </td>
+    <td><%= link_to 'Show/Add', question %></td>
+    <td><%= link_to 'Edit', edit_question_path(question) %></td>
+    <td><%= link_to 'Destroy', question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+</div>
