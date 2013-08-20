@@ -104,6 +104,7 @@ class ChallengeMaesterController < ApplicationController
 		@scoreboard.save
          end
 
+	 @newest_score = Scoreboard.order("created_at").last
          @scoreboards = Scoreboard.where("score_type = 'maester'")       
          @high_score_sorted_array_of_hashes = @scoreboards.sort_by { |hsh| hsh[:score] }.reverse
          @count = 1 

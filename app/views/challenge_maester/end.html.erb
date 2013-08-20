@@ -21,7 +21,7 @@
 <% if @limit_maester_scores_to_ten <= 10 %>
         <% @limit_maester_scores_to_ten = @limit_maester_scores_to_ten + 1 %>
 
-<% if scb.id == @scoreboards.last.id %>
+<% if scb.id == @newest_score.id %>
    <tr id="last_score">
         <% if @is_first_score == "true" %>
                 <% @is_first_score = "false" %>
