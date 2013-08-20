@@ -129,9 +129,13 @@
         margin-right: auto;
 	text-align: center;
 	text-align: center;
-        background: url(/images/scroll_Top.jpg) center top no-repeat,
-                    url(/images/scroll_Bottom.jpg) center bottom no-repeat,
-                    url(/images/scroll_Middle.jpg) center top repeat-y;
+        
+
+	background-image: url(/images/scroll_Top.jpg);
+
+//	background: url(/images/scroll_Top.jpg) center top no-repeat,
+//                    url(/images/scroll_Bottom.jpg) center bottom no-repeat,
+//                    url(/images/scroll_Middle.jpg) center top repeat-y;
 }	
 
 .level_of_lore_mastery {
