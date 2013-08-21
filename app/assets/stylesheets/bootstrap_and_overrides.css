@@ -188,13 +188,14 @@ table.maester_table, table.archmaester_table {
 #user_info {
 	background-color: black;
         background-image: url(/images/bg_page2.png);
-        background-repeat: repeat-y;
+        background-repeat: repeat-y; 
         background-position: center top;
         font-size: 12px; 
         padding: 0;
         margin: 0 auto;
         width: auto;
 	text-align: center;
+
 }
 
 .question {

@@ -1,11 +1,11 @@
 jQuery(function() {
 
      $('.iframe').fancybox({
-        width : '30%',
+        width : '55%',
         height : '50%',
         titlePosition: 'outside',
 	'type' : 'iframe',
-        'scrolling' : 'no',
+        'scrolling' : 'yes',
     }); // end fancybox
 
     $('.level_of_lore_mastery').fancybox({
