@@ -39,7 +39,7 @@
    <td><%= scb.user.last_name %></td>
    <td><%= scb.score %></td>
    <td><%= scb.user.house_allegiance %>
-   <td><%= link_to "details", user_path(:id => scb.user_id), {:class => "iframe", :title => "Details"} %>
+   <td><%= link_to "details", user_path(:id => scb.user_id) + '#user_info_' + scb.user.house_allegiance.downcase, {:class => "iframe", :title => "Details"} %>
 
   </tr>
 <% else %>
@@ -60,7 +60,7 @@
    <td><%= scb.user.last_name %></td>
    <td><%= scb.score %></td>
    <td><%= scb.user.house_allegiance %>
-   <td><%= link_to "details", user_path(:id => scb.user_id), {:class => "iframe", :title => "Details"} %>
+   <td><%= link_to "details", user_path(:id => scb.user_id)  + '#user_info_' + scb.user.house_allegiance.downcase, {:class => "iframe", :title => "Details"} %>
 
   </tr>
 

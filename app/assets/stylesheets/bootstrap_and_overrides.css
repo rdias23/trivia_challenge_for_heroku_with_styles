@@ -198,6 +198,187 @@ table.maester_table, table.archmaester_table {
 
 }
 
+#user_info_stark {
+        background-color: black;
+        background-image: url(/images/stark.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_lannister {
+        background-color: black;
+        background-image: url(/images/lannister.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_greyjoy {
+        background-color: black;
+        background-image: url(/images/greyjoy.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_martell {
+        background-color: black;
+        background-image: url(/images/martell.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_tyrell {
+        background-color: black;
+        background-image: url(/images/tyrell.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_arryn {
+        background-color: black;
+        background-image: url(/images/arryn.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_targaryen {
+        background-color: black;
+        background-image: url(/images/targaryen.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_baratheon {
+        background-color: black;
+        background-image: url(/images/baratheon.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_blackfyre {
+        background-color: black;
+        background-image: url(/images/blackfyre.jpeg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_nights_watch {
+        background-color: black;
+        background-image: url(/images/nights_watch.jpg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
+#user_info_stark span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_lannister span {
+	padding: 1px 1px 1px 1px; 
+	background: #f03;
+}
+
+#user_info_greyjoy span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_martell span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_tyrell span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_arryn span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_targaryen span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_baratheon span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_blackfyre span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_nights_watch span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+
 .question {
 	background-color: black;
         background-image: url(/images/bg_page2.png);
