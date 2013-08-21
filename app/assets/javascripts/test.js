@@ -5,7 +5,7 @@ jQuery(function() {
         height : '50%',
         titlePosition: 'outside',
 	'type' : 'iframe',
-        'scrolling' : 'yes',
+        'scrolling' : 'no',
     }); // end fancybox
 
     $('.level_of_lore_mastery').fancybox({
