@@ -1,9 +1,8 @@
 Raymond Dias
-BEWD Final Project
-Spring 2013
+BEWD Final Project -- Upgraded for Front-End and Misc. Improvements Summer 2013
 
 Project Title: "The A Song of Ice and Fire Trivia Challenge"
-Hosted on Heroku: http://enigmatic-ravine-9938.herokuapp.com
+Hosted on Heroku: http://murmuring-beach-1225.herokuapp.com/
 
 Abstract: "A Song of Ice and Fire" is a series of fantasy novels by George RR Martin; these novels are the source material for the HBO television series "Game of Thrones." The "A Song of Ice and Fire Trivia Challenge" is a web application that gives users the opportunity to test their knowedge of the "A Song of Ice and Fire" universe. In addition to the main books in the series, trivia questions may also come from the "Dunk and Egg" prequel novellas, also written by George RR Martin.
 
