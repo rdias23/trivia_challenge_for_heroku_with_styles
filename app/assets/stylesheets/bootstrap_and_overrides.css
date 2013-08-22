@@ -302,6 +302,19 @@ table.maester_table, table.archmaester_table {
 
 }
 
+#user_info_tully {
+        background-color: black;
+        background-image: url(/images/tully.jpg);
+        background-repeat: repeat;
+        background-position: center top;
+        font-size: 12px;
+        padding: 0;
+        margin: 0 auto;
+        width: auto;
+        text-align: center;
+
+}
+
 #user_info_blackfyre {
         background-color: black;
         background-image: url(/images/blackfyre.jpeg);
@@ -364,6 +377,11 @@ table.maester_table, table.archmaester_table {
 }
 
 #user_info_baratheon span {
+        padding: 1px 1px 1px 1px;
+        background: #f03;
+}
+
+#user_info_tully span {
         padding: 1px 1px 1px 1px;
         background: #f03;
 }

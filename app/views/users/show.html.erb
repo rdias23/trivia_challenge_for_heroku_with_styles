@@ -173,6 +173,25 @@
 
 </div>
 
+<% elsif @user.house_allegiance == "Tully" %>
+
+<div id="user_info_tully"
+
+<strong><span>User Info:</span></strong>
+  <p><span>First Name: <b> <%= @user.first_name %></p> </b></span>
+  <p><span>Last Name: <b> <%= @user.last_name %></p> </b></span>
+  <p><span>Email Address: <b> <%= @user.email %></p> </b></span>
+  <p><span>House Allegiance: <b> <%= @user.house_allegiance %> </b></span>
+  <p><span>Favorite Book: <b> <%= @user.favorite_book %> </b></span>
+  <p><span>Bio: <b> <%= @user.bio %> </b></span>
+  <p><span>Favorite Quote: <b> <%= @user.favorite_quote %></p> </b></span>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br
+/><br/><br/><br/><br/><br/><br/><br/><br/>
+</p>
+
+</div>
+
 <% elsif @user.house_allegiance == "Blackfyre" %>
 
 <div id="user_info_blackfyre">
